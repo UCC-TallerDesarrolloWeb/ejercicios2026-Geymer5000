@@ -18,8 +18,8 @@
 -  [X] Primer HTML
 -  [X] Secciones
 -  [X] Títulos
--  [ ] Listas
--  [ ] Link
+-  [X] Listas
+-  [X] Link
 -  [ ] Tablas I
 -  [ ] Tablas II
 -  [ ] Tablas III
