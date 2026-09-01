@@ -22,31 +22,32 @@
     </h3>
     <form name="form-suscripcion">
       <p>
-        Nombre:
+        <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" placeholder="ingrese su nombre" />
       </p>
       <p>
-        Apellido:
+        <label for="apellido">Apellido:</label>
         <input type="text" name="apellido" placeholder="ingrese su apellido" />
       </p>
       <p>
-        Sexo:
+        <label for="sexo">Sexo:</label>
         <input type="radio" name="sexo" value="masculino"  checked> Masculino
         <input type="radio" name="sexo" value="femenino" > Femenino
       </p>
       <p>
-        Edad: <input type="number" name="edad" placeholder="ingrese su edad" />
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" placeholder="ingrese su edad" />
       </p>
       <p>
-        Email:
+       <label for="email">Email:</label>
         <input type="email" name="email" placeholder="ingrese su email" />
       </p>
       <p>
-        Usuario:
+        <label for="usuario"></label>Usuario:</label>
         <input type="text" name="usuario" placeholder="ingrese su usuario" />
       </p>
       <p>
-        Password:
+        <label for="password">Password:</label>
         <input
           type="password"
           name="password"
@@ -54,7 +55,7 @@
         />
       </p>
       <p>
-        Confirmar Password:
+        <label for="segunda_password">Confirmar Password:</label>
         <input
           type="password"
           name="segunda_password"
@@ -63,6 +64,7 @@
       </p>
 
       <p>
+        <label for="tipo_servicio">Tipo de servicio:</label>
         Tipo de servicio: Free / Standard / Premium
         <select name="tipo_servicio">
           <option>value = "free"</option>
@@ -71,22 +73,24 @@
         </select>
       </p>
 
-      Tema: Política
-      <input type="checkbox" name="tema" value="politica" /> Educación
-      <input type="checkbox" name="tema" value="educacion" /> Negocios
-      <input type="checkbox" name="tema" value="negocios" /> Tecnología
-      <input type="checkbox" name="tema" value="tecnologia" /> Salud
-      <input type="checkbox" name="tema" value="salud" />
-
+      <label for="tema">Tema: Política</label>
+      <select name="tema">
+        <option value="politica">Política</option>
+        <option value="educacion">Educación</option>
+        <option value="negocios">Negocios</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="salud">Salud</option>
+      </select>
+    
       <p>
-        Agregue un comentario:
-        <textarea>
+        <label for="comentario">Deje su comentario:</label>
+        <textarea name="comentario">
     Deje su comentario...
 </textarea
         >
       </p>
       <p>
-        Boton de Enviar
+        <label for="enviar">Boton de Enviar</label>
         <button type="submit">Enviar</button>
       </p>
     </form>
