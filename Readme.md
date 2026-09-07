@@ -39,11 +39,11 @@
 -  [ ] Position
 -  [X] 2 Columnas
 -  [X] Grid
--  [ ] grid-areas
--  [ ] Mejora
--  [ ] Transitions
--  [ ] Viewport
--  [ ] Responsive
+-  [X] grid-areas
+-  [X] Mejora
+-  [X] Transitions
+-  [X] Viewport
+-  [X] Responsive
 
 ## Unidad 3: JavaScript y ES6+
 

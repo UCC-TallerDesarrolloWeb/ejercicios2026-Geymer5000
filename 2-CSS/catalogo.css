@@ -1,5 +1,10 @@
+:root{
+    --color-primario: rgb(120,11,11);
+    --color-secundario: rgb(35,120,20);
+    --color-texto: white;
+}
 main{
-    display:grid;
+    display: grid;
     grid-template-columns: auto auto auto;
 
     & div{
@@ -11,8 +16,45 @@ main{
         
         & img{
             width: 100%;
-            height: 80%;
+           
         }
     }
 
+}
+.item1{
+    grid-area: header;
+}
+.item2{
+ grid-area: nav;
+}
+.item3{
+grid-area: aside;
+
+}
+.item4{
+grid-area: main;
+}
+.item5{
+grid-area: footer;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+        'header header header header'
+        'nav nav nav nav'
+        'aside main main main'
+        'footer footer footer footer';
+    gap: 10px;    
+
+}
+a {
+    text-decoration: none;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    font-weight: 500;
+    padding: 5px;
+    transition: background-color 0.8s linear 0.2;
+    &:hover {
+        background-color: var(--color-secundario);
+    }
 }
