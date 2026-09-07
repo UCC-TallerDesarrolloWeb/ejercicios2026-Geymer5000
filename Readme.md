@@ -27,7 +27,7 @@
 -  [X] Comentarios
 -  [X] Formulario
 -  [X] Accesibilidad
--  [ ] Multimedia
+-  [X] Multimedia
 
 ### CSS
 -  [X] Propiedades tipográficas
@@ -35,7 +35,7 @@
 -  [X] Estilo con Descendientes
 -  [X] Pseudo Clases
 -  [X] CV
--  [X}] Backgrounds
+-  [X] Backgrounds
 -  [ ] Position
 -  [ ] 2 Columnas
 -  [ ] Grid
