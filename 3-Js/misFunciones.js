@@ -1,10 +1,11 @@
 /**
  * Descripción
  * @method Nombre de la función
- * @param Parámetro A
- * @param Parámetro B
+ * @param {string} id - Id del elemento HTML
+ * @param {number} valor - Valor ingresado por el usuario
  * @return Valor que retorna
  */
+
 function convertirUnidadeas(id,valor){
     if(isNan(valor)){ /* isNan() es una función que devuelve true si el valor no es un número y false si lo es */
         alert("El valor introducido no es un número");
