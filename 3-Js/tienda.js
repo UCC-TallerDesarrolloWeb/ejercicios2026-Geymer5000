@@ -61,3 +61,15 @@ const productos = [
     imagen: "protectores-manos.webp",
   },
 ];
+
+/* Descripción
+ * @method MostrarModal
+ * @param {string} valor = valor del id del radio butoon seleccionado
+ */
+
+mostrarModal = () => {
+  document.getElementById("modal").style.display="block";
+}
+cerrarModal = () => {
+  document.getElementById("modal").style.display="none";
+}

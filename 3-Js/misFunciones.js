@@ -9,6 +9,9 @@
 convertirUnidadeas=(id,valor)=>{
 
     if(isNan(valor)){ /* isNan() es una función que devuelve true si el valor no es un número y false si lo es */
+        let metros,pulgadas,pies,yardas;
+
+        valor = valor.replace(",",".");
         alert("El valor introducido no es un número");
 
        metros = "";
@@ -17,32 +20,36 @@ convertirUnidadeas=(id,valor)=>{
        yardas = "";
         
     } else if (id=="metro"){
-        metros = valor;
+        metro = valor;
         pulgadas = valor * 39.37;
         pies = valor * 3.28;
         yardas = valor * 1.09361;
     } else if (id=="pie"){
 
-        document.getElementById("pulgada").value = "";
-        document.getElementById("pie").value = "";
-        document.getElementById("yarda").value = "";
-        document.getElementById("metro").value = "";
+        pie = valor;
+        pulgadas = valor * 12;
+        metro = valor * 0.0254;
+        yardas = valor * 0.027778;
 
     } else if (id=="pulgada"){
 
-        document.getElementById("pulgada").value = "";
-        document.getElementById("pie").value = "";
-        document.getElementById("yarda").value = "";
-        document.getElementById("metro").value = "";
+        pulgadas = valor;
+        metro = valor * 0.0254;
+        pies = valor * 0.083333;
+        yardas = valor * 0.027778;
 
     } else if (id=="yarda"){
 
-        document.getElementById("pulgada").value = metros;
-        document.getElementById("pie").value = pulgadas;
-        document.getElementById("yarda").value = pies;
-        document.getElementById("metro").value = yardas;
+        yardas = valor;
+        metro = valor * 0.9144;
+        pies = valor * 3;
+        pulgadas = valor * 36;
 
     }    
+    document.getElementById("metro").value = Math.round(metro * 100) / 100;
+    document.getElementById("pulgada").value = Math.round(pulgadas * 100) / 100;
+    document.getElementById("pie").value = pies.toFixed(2);
+    document.getElementById("yarda").value = yardas.toFixed(2);
 }
 /* Descripción
  * @method ConvertirGr
@@ -61,3 +68,33 @@ function convertirGR(id){
         document.getElementById("grados").value = grad;
         document.getElementById("radianes").value = rad;
     }
+
+/* Descripción
+ * @method MostrarOcultar
+ * @param {string} valor = valor del id del radio butoon seleccionado
+ */
+mostrarOcultar = (valor)=>{
+
+    const displayDiv = valor ==="val_mostrar" ? "block" : "none";
+    document.getElementById("unDiv").style.display = displayDiv;
+
+    // if (valor==="val_mostrar"){
+    //     document.getElementById("unDiv").style.display = "block";
+    // } else {
+    //     document.getElementById("unDiv").style.display = "none";
+    // }
+}
+
+/* Descripción
+ * @method CalcularSuma
+ */
+
+calcularSuma = () => {
+
+    let sum1,sum2;
+
+    sum1 = Number(document.getElementById("nums1").value);
+    sum2 = Number(document.getElementById("nums2").value);
+    document.getElementById("totalS").value = sum1 + sum2;
+
+}
