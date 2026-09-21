@@ -73,3 +73,16 @@ mostrarModal = () => {
 cerrarModal = () => {
   document.getElementById("modal").style.display="none";
 }
+
+mostrarCatalogo = () => {
+    let contenido = "";
+
+    productos.forEach((producto) => {
+    contenido += `<div> 
+                    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/${producto.imagen}" alt="${producto.nombre}">
+                    <h3>${producto.nombre}</h3>
+                    <button type="button" onclick="mostrarModal()">Ver Detalles del Producto</button>
+                </div>`
+    });
+    document.getElementById("catalogo").innerHTML = contenido;
+}

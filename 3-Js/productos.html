@@ -7,7 +7,7 @@
     <head>
        
     </head>
-        <body class="grid-container">
+        <body class="grid-container" onload="mostrarCatalogo()">
         <header class="item1">
             Catalogo de Productos
         </header>
@@ -47,46 +47,13 @@
             </form>
         </aside>
         
-
-            <main class="item4">
                 <dialog id="modal">
                     <h2>Cabezal Cerrado</h2>
                     <p> Cabezal que hace cosas muy cosas</p>
                     <button type="button" onclick="cerrarModal()">Cerrar Modal</button>
                 </dialog>
-                <div id="modal">
-                    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/cabezal-cerrado.webp" alt="Cabezal Cerrado">
-                    <h3>Cabezal Cerrado</h3>
-                    <button type="button" onclick="mostrarModal()">Ver Detalles del Producto</button>
-                </div>
-
-                <div>
-                    
-                    <h3>Dobok</h3>
-                    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/dobok.webp" alt=" Dobok">
-                </div>
-
-                <div>
-                    <h3>Escudo de Potencia</h3>
-                    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/escudo-potencia.webp" alt="Escudo de Potencia">
-                </div>
-
-                <div>
-                    <h3>Foco con Dedos</h3>
-                    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/foco-con-dedos.webp" alt="Foco con Dedos">
-                </div>
-
-                <div>
-
-                    <h3>Protectores de Manos</h3>
-                    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/protectores-manos.webp" alt="Protectores de Manos">
-                </div>
-
-                <div>
-
-                    <h3>Protectores de Pie</h3>
-                    <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/protectores-pie.webp" alt="Protectores de Pies">
-                </div>
+            <main id="catalogo" class="item4">
+                
             </main>
 
             <footer class="item5">
