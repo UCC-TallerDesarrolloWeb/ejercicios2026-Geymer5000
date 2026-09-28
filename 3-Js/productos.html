@@ -7,49 +7,69 @@
     <head>
        
     </head>
-        <body class="grid-container" onload="mostrarCatalogo()">
+        <body class="grid-container" onload="mostrarCatalogo(); contarProductos()">
         <header class="item1">
             Catalogo de Productos
         </header>
         <nav class="item2">
-            <a href="productos.html">Catálogo</a>
             <a href="productos.html">Productos</a>
+            <a href="carrito.html">Carrito</a>
+            <div id="cant-prod" >
+                0
+            </div>
         </nav>
         <aside class="item3">
             <form name="filtros" id="filter">   
             <fieldset>
                 <legend>Buscador</legend>
-                <label for=""search">Buscar</label>
-                <input type="text" name="search" id="search" placeholder="Busca algo">
+                <label for="search">Buscar</label>
+                <input type="text" name="search" id="search" placeholder="Busca algo" onchange="filtrarProductos()">
+            </fieldset>
+            <fieldset>
+                <legend>Marca</legend>
+                <select id="marca" onchange="filtrarProductos()">
+                    <option value="Todas">Todas</option>
+                    <option value="Gran Marc">Gran Marc</option>
+                    <option value="Daedo">Daedo</option>
+                </select>
             </fieldset>
             <fieldset>
                 <legend>Precios</legend>
                 <p>
                     <label for="price-min">Mínimo</label>
-                    <input type="number" name="price-min" id="price-min" placeholder="Precio mínimo">
+                    <input type="number" name="price-min" id="price-min" placeholder="Precio mínimo" onchange="filtrarProductos()">
                 </p>
                 <p>
                     <label for="price-max">Máximo</label>
-                    <input type="number" name="price-max" id="price-max" placeholder="Precio máximo">
+                    <input type="number" name="price-max" id="price-max" placeholder="Precio máximo" onchange="filtrarProductos()">
                 </p>
             </fieldset>
             <fieldset>
                 <legend>Tipo de Productos</legend>
                 <p>
-                    <input type="checkbox" name="tipo" id="protectores" value="protectores">
+                    <input type="checkbox" name="tipo" id="protectores" value="protectores" onchange="filtrarProductos()">
                     <label for="protectores">Protectores</label>
-                    <input type="checkbox" name="tipo" id="entrenamiento" value="entrenamiento">
+                    <input type="checkbox" name="tipo" id="entrenamiento" value="entrenamiento" onchange="filtrarProductos()">
                     <label for="entrenamiento">Entrenamiento</label>
-                    <input type="checkbox" name="tipo" id="dobok" value="dobox">
+                    <input type="checkbox" name="tipo" id="dobok" value="dobox" onchange="filtrarProductos()">
                     <label for="dobok">Dobok</label>
                 </p>
+            </fieldset>
+            <fieldset>
+                <legend>Ordenar Catalogo</legend>
+                <select id="order" onchange="ordenarCatalogo()">
+                    <option value="Mayor">Precio Descendente</option>
+                    <option value="menor">Precio Ascendente</option>
+                    <option value="a-z">Nombre A-Z</option>
+                    <option value="z-a">Nombre Z-A</option>
+                </select>
             </fieldset>
             </form>
         </aside>
         
                 <dialog id="modal">
-                    <h2>Cabezal Cerrado</h2>
-                    <p> Cabezal que hace cosas muy cosas</p>
+                    <h2 id="nombre-producto">Cabezal Cerrado</h2>
+                    <p id="descripcion.producto"> Cabezal que hace cosas muy cosas</p>
                     <button type="button" onclick="cerrarModal()">Cerrar Modal</button>
                 </dialog>
             <main id="catalogo" class="item4">

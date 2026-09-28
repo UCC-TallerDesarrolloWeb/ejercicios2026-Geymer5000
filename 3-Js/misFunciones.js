@@ -85,7 +85,7 @@ mostrarOcultar = (valor)=>{
     // }
 }
 
-/* Descripción
+/**  Descripción
  * @method CalcularSuma
  */
 
@@ -99,3 +99,38 @@ calcularSuma = () => {
 
 }
 
+/** Calcular la resta de dos números
+ * @method CalcularResta
+ */
+
+calcularResta = () => {
+    let res1,res2;
+
+    res1 = Number(document.getElementById("numr1").value);
+    res2 = Number(document.getElementById("numr2").value);
+    document.getElementById("totalR").innerText = res1 - res2;
+}
+
+/** Calcular la multiplicación de dos números
+ * @method CalcularMultiplicacion
+ */
+
+calcularMultiplicacion = () => {
+    let mul1,mul2;
+
+    mul1 = Number(document.getElementById("numm1").value);
+    mul2 = Number(document.getElementById("numm2").value);
+    document.getElementById("totalM").innerText = mul1 * mul2;
+}
+
+/** Calcular la división de dos números
+ * @method CalcularDivision
+ */
+
+calcularDivision = () => {
+    let div1,div2;
+
+    div1 = Number(document.getElementById("numd1").value);
+    div2 = Number(document.getElementById("numd2").value);
+    document.getElementById("totalD").innerText = div1 / div2;
+}
